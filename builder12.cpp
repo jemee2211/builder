@@ -5,7 +5,9 @@
 //(C) Display All Record In Ascending order (by item Number)
 
 #include<iostream>
+#include<string.h>
 using namespace std;
+
 class supermarket{
 	
 	char id[50];
@@ -30,28 +32,28 @@ void supermarket::setter(){
 	cin>>id;
 	
 	
-	 if(id == id){
+	 if(id == 'n'){
 		    cout<<"Enter Password: ";
 			cin>>password;
 		   	
-		   	if(password == password){
+		   	if(password == 'password'){
 		   		
 		   		cout<<"Log In"<<endl;
 		   		
-	cout<<"Enter Item Number:";
-	cin>>number;
+            	cout<<"Enter Item Number:";
+	            cin>>number;
 	
-	cout<<"Enter Item Name:";
-	cin>>name;
+            	cout<<"Enter Item Name:";
+            	cin>>name;
 	
-	cout<<"Enter Item Quantity:";
-	cin>>quantity;
+            	cout<<"Enter Item Quantity:";
+            	cin>>quantity;
 	
-	cout<<"Enter Item Tax:";
-	cin>>tax;
+             	cout<<"Enter Item Tax:";
+            	cin>>tax;
 	
-	cout<<"Enter Item Discount:";
-	cin>>dis;
+            	cout<<"Enter Item Discount:";
+            	cin>>dis;
 		}
 			   else{
 			   	

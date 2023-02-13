@@ -5,7 +5,7 @@ using namespace std;
 
 class  old{
 	
-	private:
+	public:
 		
 		int a;
 		char b[50];
@@ -25,17 +25,17 @@ class  old{
 	}
 };
 
-class new{
+class unique {
 	
 	public:
 		
-		void getData():
+		void getData(int a, char b);
 	
 };
 
-void new::getData(){
+void unique::getData(int a, char b){
 	
-	cout<<"Number = "<<a
+	cout<<"Number = "<<a;
 	cout<<"Name = "<<b;
 }
 
@@ -45,7 +45,6 @@ main(){
 	
 	int a;
 	char b[50];
-	new obj;
-	obj.room();
-	obj.getter();
+	unique obj;
+	obj.getData(a,b);
 }

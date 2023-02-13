@@ -13,7 +13,7 @@ class bank{
 		char S;
 		int number;
 		int no;
-		char mail;
+		char mail[50];
 		int w,v,z;
 		
 	public:
@@ -35,13 +35,13 @@ void bank::setData(){
 	
 	cout<<"Press Key N Enter To Continue.....";
 	cin>>a;
-	if(a==n){
+	if(a=='n'){
 		
 		cout<<"-: Press A to Log in as Aministrator or S to Log in as STAFF :-";
 		cin>>c;
-		if(c==S){
+		if(c=='s'){
 			
-			cout<<"-: Welcome as STAFF :-";
+			cout<<"-: Welcome as STAFF :-"<<endl<<endl;
 			
 			cout<<"Enter Staff Name :";
 			cin>>name;
@@ -55,9 +55,9 @@ void bank::setData(){
 			cout<<"Enter E-mail of Staff :";
 			cin>>mail;
 			
-			cout<<"Press [1] to Deposite the money:";
-			cout<<"Press [2] to Transfer the money:";
-			cout<<"Press [3] to Withdraw the money:";
+			cout<<"Press [1] to Deposite the money:"<<endl;
+			cout<<"Press [2] to Transfer the money:"<<endl;
+			cout<<"Press [3] to Withdraw the money:"<<endl;
 			cin>>b;
 			
 			if(b==3){
@@ -72,7 +72,7 @@ void bank::setData(){
 			  
 			  z=v-w;
 			  
-			  cout<<"Your Account Balance Is :"<<z<<endl;			
+			  cout<<"Your Account Balance Is :"<<z<<endl<<endl;			
 			}
 			else if(b == 2){
 				cout<<"Transfer the Money :";
@@ -85,7 +85,7 @@ void bank::setData(){
 			  
 			  z=v-w;
 			  
-			  cout<<"Your Account Balance Is :"<<z<<endl;
+			  cout<<"Your Account Balance Is :"<<z<<endl<<endl;
 			}
 			else if(b==1){
 				cout<<"Deposite the Money :";
@@ -96,14 +96,12 @@ void bank::setData(){
 			  
 			  cout<<"Congrates Your Amount Has Deposite sucessfully."<<endl;
 			  
-			  z=v-w;
+			  z=v+w;
 			  
-			  cout<<"Your Account Balance Is :"<<z<<endl;
+			  cout<<"Your Account Balance Is :"<<z<<endl<<endl;
 				
 			}
-			else{
-				
-			}
+			
 		}
 		else{
 			cout<<"-: Welcome as Aministrator :-";
@@ -112,7 +110,7 @@ void bank::setData(){
 		}
 	}
 	else{
-		cout<<"Please Enter N "<<endl;
+		cout<<"Please Enter N "<<endl<<endl;
 	}	
 	
 }

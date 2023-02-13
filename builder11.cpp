@@ -12,7 +12,7 @@ class reservation{
 	private:
 		
 		int number;
-		int time;
+		char time[50];
 		char name[50];
 		char source[50];
 		char destination[50];
@@ -20,7 +20,10 @@ class reservation{
 	public:
 		
 		void setter();
-		void getter();
+		void getter(int num);
+		int getnumber(){
+			return number;
+		};
 };
 
 void reservation::setter(){
@@ -28,47 +31,32 @@ void reservation::setter(){
 	cout<<"Enter Train Number:";
 	cin>>number;
 	
-//	cout<<"Enter Train Time:";
-//	cin>>time;
-//	
-//	cout<<"Enter Train Name:";
-//	cin>>name;
-//	
-//	cout<<"Enter Train Source:";
-//	cin>>source;
-//	
-//	cout<<"Enter Train Destination:";
-//	cin>>destination;
-//	
+	cout<<"Enter Train Time:";
+	cin>>time;
+	
+	cout<<"Enter Train Name:";
+	cin>>name;
+	
+	cout<<"Enter Train Source:";
+	cin>>source;
+	
+	cout<<"Enter Train Destination:";
+	cin>>destination;
+
 	
 	
 }
 
-void reservation::getter(){
+void reservation::getter(int num){
 	
 	cout<<"Train Number = "<<number<<endl;
 	
-	if(number == 1){
+	if(number == num){
 		
-		cout<<"Train Time is 9:00 AM"<<endl;
-		cout<<"Train Name is Rajdhani"<<endl;
-		cout<<"Train Start From Mumbai"<<endl;
-		cout<<"Train Destination Is Surat"<<endl;
-		
-	}
-	else  if(number == 2){
-		cout<<"Train Time is 9:00 PM"<<endl;
-		cout<<"Train Name is Local"<<endl;
-		cout<<"Train Start From Jamnagar"<<endl;
-		cout<<"Train Destination Is Rajkot"<<endl;
-		
-	}
-	
-	else if(number == 3){
-		cout<<"Train Time is 11:00 AM"<<endl;
-		cout<<"Train Name is Rajdhani"<<endl;
-		cout<<"Train Start From Mumbai"<<endl;
-		cout<<"Train Destination Is Delhi"<<endl;
+		cout<<"Train Time"<<time<<"AM"<<endl;
+		cout<<"Train Name is"<<time<<endl;
+		cout<<"Train Start From"<<source<<endl;
+		cout<<"Train Destination Is "<<destination<<endl;
 		
 	}
 	
@@ -81,14 +69,27 @@ void reservation::getter(){
 
 main(){
 	
-	int i;
+	int i,num,n ;
 	reservation o;
 	
-	for(i=0 ; i<3; i++){
+	cout<<"Enter Size of Train Number:";
+	cin>>n;
+	
+	for(i=0 ; i<n; i++){
 	
 	o.setter();
-	o.getter();
 	
+}
+
+x:
+	cout<<"Enter Desire Train Number:";
+	cin>>num;
+	
+	for(i=0 ; i<n; i++){
+	
+	o.getter(num);
+	
+	goto x;
 }
 	
 	
